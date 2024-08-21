@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F4FDFF;
+    background-image: url("https://cdn.discordapp.com/attachments/978561946188148806/1227989313762103458/photo_2024-04-11_21-30-45.jpg?ex=662a692b&is=6617f42b&hm=4bb9df056d7006f0b415c59c4a63836948984063593dc132904bee8f84400558&");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Head Website */
+
+#head {
+    display: flex;
+    align-items: center;
+    color: #333;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+#head nav {
+    position: absolute;
+    right: 50px;
+}
+
+#head nav ul {
+    display: flex;
+    gap: 80px;
+}
+
+#head nav ul li, a {
+    list-style: none;
+    color: #444;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    border-bottom: solid 0px black;
+    transition: all 0.1s;
+}
+
+#head nav>ul>li>a:hover {
+    padding-bottom: 5px;
+    border-bottom: solid 3px black;
+    transition: all 0.1s;
+}
+
+.checkBnt {
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    right: 50px;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+/* Sawper */
+.mySwiper {
+    width: 198vh;
+    border-radius: 15px;
+}
+
+.swiper2 {
+    width: 100vh;
+    float: left;
+    overflow-x: scroll;
+}
+
+.swiper2 img {
+    margin-right: 50px;
+}
+
+
+
+/* Game Top Up */
+
+#games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bungee Spice", sans-serif;
+}
+
+#list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+#game {
+    background-color: rgba(0, 0, 0, 0.521);
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#game p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+#game img {
+    border-radius: 10px;
+}
+
+#game div {
+    background-color: rgba(0, 255, 255, 0.493);
+    border-radius: 50px;
+    transition: ease 0.2s;
+}
+
+#game div p {
+    margin: 0;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    transition: ease 0.2s;
+}
+
+#game div:hover {
+    background-color: rgb(255, 255, 255);
+    transition: ease 0.2s;
+}
+#game div:hover p {
+    color: rgba(0, 255, 255, 0.493);
+    transition: ease 0.2s;
+}
+
+
+
+
+/* Footer Website */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00000020;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.footer div {
+    display: flex;
+    gap: 10px;
+}
+
+.footer img {
+    height: 35px;
+    width: 35px;
+    border-radius: 25%;
+    transition: all 0.1s;
+}
+
+.footer img:hover {
+    border-radius: 50%;
+    transition: all 0.1s;
+}
+
+#footerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#footerText div {
+    position: absolute;
+    transform: translateY(30px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Ipad Model */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+    #head nav ul {
+        display: none;
+    }
+    .checkBnt {
+        display: block;
+    }
+    .mySwiper{
+        width: 100%;
+    }
+    #game {
+        padding: 8px;
+    }
+
+}
+
+/* Phone Model */
+
+@media only screen and (max-width: 600px) {
+    #head {
+        padding: 0px;
+    }
+    .checkBnt {
+        display: block;
+    }
+    #head ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #999;
+        top: 79px;
+        left: -100%;
+        text-align: center;
+        transform: translateX(-50px) ;
+        padding-top: 50px;
+        transition: all .5s;
+        z-index: 999;
+    }
+    #head nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mySwiper{
+        width: 100%;
+    }
+    .swiper2 {
+        width: 50vh;
+        float: left;
+        overflow-x: scroll;
+    }
+    #head {
+        font-size: 10px;
+        gap: 0;
+    }
+    #list {
+        gap: 10px;
+    }
+    #game {
+        padding: 5px;
+        margin-bottom: 12px;
+    }
+    #game img {
+        width: 100px;
+    }
+    #game p {
+        font-size: 12px;
+    }
+}

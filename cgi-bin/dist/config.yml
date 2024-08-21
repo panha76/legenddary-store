@@ -1,0 +1,42 @@
+# TEMPLE CONFIG 1.0
+# GAME TOP UP PLATFORM
+# --------------=======
+#
+#    Contect me
+# telegram 086293052
+#
+#======================
+
+# Config Server
+server:
+  port: 3000
+  useHttps: false # use this if you have ssl key
+  domain: 'localhost' # put your domain here
+  ssl:
+    keyPath: '/path/to/ssl/key' # don't change this if you don't know what you doing
+    certPath: '/path/to/ssl/cert' # don't change this if you don't know what you doing
+
+
+general:
+  ThankPage: 'thank-for-buy.html'
+
+
+# Config Webhook sending payment message
+webhooks:
+  discord:
+    url: 'https://discord.com/api/webhooks/1261447424849870900/xguHBOkPhd0RqTAVGDT2xibB2nh6sSfVbCJCDpMhee-X2ki1KC3n5Q3kGbHha7N5piLb'
+    enabled: true
+  telegram:
+    token: '7304639066:AAG6Z7hJoKKkEtG8wlGwZMTaHiTxYvJB-88'
+    chatId: '-1002102226109'
+    enabled: true
+
+account:
+  accountID: 'panhastore_game@aclb' # support only Bakong
+  CustomName: 'PANHA STORE GAME'
+
+# API CAMBODIA BAKONG BANK
+# Make sure that token is not expired, if that's expired your website payment is not working!
+api:
+  bakongUrl: 'https://api-bakong.nbc.gov.kh/v1/check_transaction_by_md5' # don't change this if you don't know what you doing
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiODZhZjk3Y2EyZDAzNGM2In0sImlhdCI6MTcyMDgyNDEyMCwiZXhwIjoxNzI4NjAwMTIwfQ.gmYjDoTQD03dDYyG4h0fJ3PNHdLH85BLySHFXkyLNdU'
